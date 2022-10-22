@@ -1,7 +1,7 @@
 // deletePost(id: number)
 
-import {Post, Comment, Album, Photo, Todo, User} from '../../jsonplaceholder/index.js';
-import {JsonPlaceHolderApi} from '../../jsonplaceholder/index.js';
+import {Post, Comment, Album, Photo, Todo, User} from '../../index.js';
+import {JsonPlaceHolderApi} from '../../index.js';
 
 const api = new JsonPlaceHolderApi();
 
