@@ -6,7 +6,18 @@ In other words -- these are set of wrappers around some publicly available APIs.
 
 `npm install @aibulat/restclients`
 
-### Use
+### Use jsonplaceholder.typicode.com
 
-code sample below - like https://jsonplaceholder.typicode.com/guide/
+```
+import {JsonPlaceHolderApi} from '@aibulat/restclients/jsonplaceholder/index.js';
 
+const api = new JsonPlaceHolderApi();
+const res = await api.getPosts();
+console.log( res.data );
+```
+
+### Use reqres.in
+
+```
+To be done
+```
