@@ -1,18 +1,42 @@
+import {Post, Comment, Album, Photo, Todo, User} from '../jsonplaceholder/index.js';
 import {JsonPlaceHolderApi} from '../jsonplaceholder/index.js';
 
 const api = new JsonPlaceHolderApi();
+let res: any;
 
-const res1 = await api.getPosts();
-console.log(res1.data);
+res = await api.getPosts();
+console.log(res.data[0]);
 
-const res2 = await api.getComments();
-console.log(res2.data);
+res = await api.getComments();
+console.log(res.data[0]);
 
-const res3 = await api.getPhoto();
-console.log(res3.data[0]);
+res = await api.getPhotos();
+console.log(res.data[0]);
 
-const res4 = await api.getTodos();
-console.log(res4.data[0]);
+res = await api.getTodos();
+console.log(res.data[0]);
 
-const res5 = await api.getUsers();
-console.log(res5.data[0]);
+res = await api.getUsers();
+console.log(res.data[0]);
+
+
+//get One
+res = await api.getPost(1);
+console.log( res.data );
+
+res = await api.getAlbum(1);
+console.log( res.data );
+
+res = await api.getComment(1);
+console.log( res.data );
+
+res = await api.getPhoto(1);
+console.log( res.data );
+
+res = await api.getTodo(1);
+console.log( res.data );
+
+res = await api.getUser(1);
+console.log( res.data );
+
+
