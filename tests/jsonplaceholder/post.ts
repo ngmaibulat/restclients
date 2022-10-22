@@ -1,5 +1,6 @@
-import {Post, Comment, Album, Photo, Todo, User} from '../../lib/index.js';
-import {JsonPlaceHolderApi} from '../../lib/index.js';
+import {Post, Comment, Album, Photo, Todo, User} from '../../jsonplaceholder/index.js';
+import {JsonPlaceHolderApi} from '../../jsonplaceholder/index.js';
+
 
 const api = new JsonPlaceHolderApi();
 
