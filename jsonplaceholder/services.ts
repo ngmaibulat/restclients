@@ -124,6 +124,42 @@ class JsonPlaceHolderApi
 
     //Update
 
+    async updatePost(id: number, item: Post)
+    {
+        const url = `/posts/${id}`;
+        return api.put<Post>(url, item);
+    }
+
+    async updateComment(id: number, item: Comment)
+    {
+        const url = `/comments/${id}`;
+        return api.put<Comment>(url, item);
+    }
+
+    async updatePhoto(id: number, item: Photo)
+    {
+        const url = `/photos/${id}`;
+        return api.put<Photo>(url, item);
+    }
+
+    async updateAlbum(id: number, item: Album)
+    {
+        const url = `/albums/${id}`;
+        return api.put<Album>(url, item);
+    }
+
+    async updateTodo(id: number, item: Todo)
+    {
+        const url = `/todos/${id}`;
+        return api.put<Todo>(url, item);
+    }
+
+    async updateUser(id: number, item: User)
+    {
+        const url = `/users/${id}`;
+        return api.put<User>(url, item);
+    }
+
 
     //Delete
 
