@@ -1,7 +1,7 @@
 // updatePost(id: number, item: Post)
 
-import {Post, Comment, Album, Photo, Todo, User} from '../../index.js';
-import {JsonPlaceHolderApi} from '../../index.js';
+import {Post, Comment, Album, Photo, Todo, User} from '../../lib/index.js';
+import {JsonPlaceHolderApi} from '../../lib/index.js';
 
 const api = new JsonPlaceHolderApi();
 
