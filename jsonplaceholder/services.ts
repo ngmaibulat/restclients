@@ -163,6 +163,42 @@ class JsonPlaceHolderApi
 
     //Delete
 
+    async deletePost(id: number)
+    {
+        const url = `/posts/${id}`;
+        return api.delete<Post>(url);
+    }
+
+    async deleteComment(id: number)
+    {
+        const url = `/comments/${id}`;
+        return api.delete<Comment>(url);
+    }
+
+    async deleteAlbum(id: number)
+    {
+        const url = `/albums/${id}`;
+        return api.delete<Album>(url);
+    }
+
+    async deletePhoto(id: number)
+    {
+        const url = `/photos/${id}`;
+        return api.delete<Photo>(url);
+    }
+
+    async deleteTodo(id: number)
+    {
+        const url = `/todos/${id}`;
+        return api.delete<Todo>(url);
+    }
+
+    async deleteUser(id: number)
+    {
+        const url = `/users/${id}`;
+        return api.delete<User>(url);
+    }
+
 }
 
 export {JsonPlaceHolderApi}
