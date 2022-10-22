@@ -82,6 +82,12 @@ class JsonPlaceHolderApi
 
     //Get By
 
+    async getCommentsByPost(postid: number)
+    {
+        const url = `/comments?postId=${postid}`;
+        return api.get<Array<Comment>>(url);
+    }
+
 
     //Create
 
