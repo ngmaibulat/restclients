@@ -1,17 +1,14 @@
 {
   "name": "@aibulat/restclients",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "A set of REST API clients using Typescript and Axios",
-  
   "main": "./lib/index.js",
   "type": "module",
   "module": "./lib/index.js",
-
   "exports": {
     ".": "./lib/index.js",
     "./jsonplaceholder": "./jsonplaceholder/index.js"
   },
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
