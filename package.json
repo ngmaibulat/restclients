@@ -6,8 +6,9 @@
   "type": "module",
   "module": "./lib/index.js",
   "exports": {
-    ".": "./lib/index.js",
-    "./jsonplaceholder": "./jsonplaceholder/index.js"
+    ".": null,
+    "./jsonplaceholder": "./jsonplaceholder/index.js",
+    "./reqres": "./reqres.in/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
