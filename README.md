@@ -31,7 +31,7 @@ https://github.com/ngmaibulat/restclients/issues
 ### Use jsonplaceholder.typicode.com
 
 ```
-import {JsonPlaceHolderApi} from '@aibulat/restclients/jsonplaceholder/index.js';
+import {JsonPlaceHolderApi} from '@aibulat/restclients/jsonplaceholder';
 
 const api = new JsonPlaceHolderApi();
 const res = await api.getPosts();
