@@ -34,7 +34,7 @@ https://github.com/ngmaibulat/restclients/issues
 - https://jsonplaceholder.typicode.com
 
 
-### Use jsonplaceholder.typicode.com
+### Use jsonplaceholder.typicode.com - ESM modules
 
 ```
 import {JsonPlaceHolderApi} from '@aibulat/restclients/jsonplaceholder';
@@ -44,8 +44,26 @@ const res = await api.getPosts();
 console.log( res.data );
 ```
 
-Methods - all methods are async:
 
+### Use jsonplaceholder.typicode.com - CJS modules
+
+```
+const {JsonPlaceHolderApi} = require('@aibulat/restclients/jsonplaceholder');
+
+async function run()
+{
+    const api = new JsonPlaceHolderApi();
+    const res = await api.getPhoto(1);
+    console.log( res.data );    
+}
+
+run();
+
+```
+
+### Use jsonplaceholder.typicode.com - Methods
+
+#### All methods are async:
 
 - getPosts()
 - getComments()
