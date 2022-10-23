@@ -33,6 +33,7 @@ Repository: https://github.com/ngmaibulat/restclients
 
 ### Where to submit feature requests and/or bugs?
 
+
 https://github.com/ngmaibulat/restclients/issues
 
 ---
@@ -78,48 +79,46 @@ run();
 
 #### All methods are async:
 
-- getPosts()
-- getComments()
-- getAlbums()
-- getPhotos()
-- getTodos()
-- getUsers()
+```ts
+getPosts()
+getComments()
+getAlbums()
+getPhotos()
+getTodos()
+getUsers()
+
+getPost(id: number)
+getComment(id: number)
+getAlbum(id: number)
+getPhoto(id: number)
+getTodo(id: number)
+getUser(id: number)
+
+getCommentsByPost(postid: number)
+
+createPost(item: Post)
+createComment(item: Comment)
+createAlbum(item: Album)
+createPhoto(item: Photo)
+createTodo(item: Todo)
+createUser(item: User)
 
 
-- getPost(id: number)
-- getComment(id: number)
-- getAlbum(id: number)
-- getPhoto(id: number)
-- getTodo(id: number)
-- getUser(id: number)
+updatePost(id: number, item: Post)
+updateComment(id: number, item: Comment)
+updatePhoto(id: number, item: Photo)
+updateAlbum(id: number, item: Album)
+updateTodo(id: number, item: Todo)
+updateUser(id: number, item: User)
 
 
-- getCommentsByPost(postid: number)
-
-
-- createPost(item: Post)
-- createComment(item: Comment)
-- createAlbum(item: Album)
-- createPhoto(item: Photo)
-- createTodo(item: Todo)
-- createUser(item: User)
-
-
-- updatePost(id: number, item: Post)
-- updateComment(id: number, item: Comment)
-- updatePhoto(id: number, item: Photo)
-- updateAlbum(id: number, item: Album)
-- updateTodo(id: number, item: Todo)
-- updateUser(id: number, item: User)
-
-
-- deletePost(id: number)
-- deleteComment(id: number)
-- deleteAlbum(id: number)
-- deletePhoto(id: number)
-- deleteTodo(id: number)
-- deleteUser(id: number)
-
+deletePost(id: number)
+deleteComment(id: number)
+deleteAlbum(id: number)
+deletePhoto(id: number)
+deleteTodo(id: number)
+deleteUser(id: number)
+```
 
 
 ### Use reqres.in
