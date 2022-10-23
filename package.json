@@ -1,26 +1,21 @@
 {
   "name": "@aibulat/restclients",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "description": "A set of REST API clients using Typescript and Axios",
   "main": "./lib/index.js",
   "type": "module",
   "module": "./lib/index.js",
-
   "exports": {
     ".": null,
-
     "./jsonplaceholder": {
       "import": "./dist/esm/jsonplaceholder/index.js",
       "require": "./dist/cjs/jsonplaceholder/index.js"
     },
-
     "./reqres": {
       "import": "./dist/esm/reqres.in/index.js",
       "require": "./dist/cjs/reqres.in/index.js"
     }
-
   },
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -fr dist/*; tsc -p tsconfig.json; tsc -p tsconfig-cjs.json",
