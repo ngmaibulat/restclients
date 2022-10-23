@@ -18,9 +18,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -fr dist/*; tsc -p tsconfig.json; tsc -p tsconfig-cjs.json",
+    "build": "rm -fr dist/*; tsc -p tsconfig.json; tsc -p tsconfig-cjs.json; bash fixup.sh",
     "build-dev": "tsc -w",
-    "alga": "npm run build; npm version patch; npm publish; git push; bash fixup.sh"
+    "alga": "npm run build; npm version patch; npm publish; git push"
   },
   "repository": {
     "type": "git",
