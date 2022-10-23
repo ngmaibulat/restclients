@@ -60,7 +60,8 @@ console.log( res.data );
 ### Use jsonplaceholder.typicode.com - CJS modules
 
 ```js
-const {JsonPlaceHolderApi} = require('@aibulat/restclients/jsonplaceholder');
+const pkg = '@aibulat/restclients/jsonplaceholder';
+const {JsonPlaceHolderApi} = require(pkg);
 
 async function run()
 {
