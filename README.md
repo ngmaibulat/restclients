@@ -44,7 +44,8 @@ const res = await api.getPosts();
 console.log( res.data );
 ```
 
-Methods - All methods are async:
+Methods - all methods are async:
+
 
 - getPosts()
 - getComments()
@@ -53,6 +54,7 @@ Methods - All methods are async:
 - getTodos()
 - getUsers()
 
+
 - getPost(id: number)
 - getComment(id: number)
 - getAlbum(id: number)
@@ -60,7 +62,9 @@ Methods - All methods are async:
 - getTodo(id: number)
 - getUser(id: number)
 
+
 - getCommentsByPost(postid: number)
+
 
 - createPost(item: Post)
 - createComment(item: Comment)
@@ -69,6 +73,7 @@ Methods - All methods are async:
 - createTodo(item: Todo)
 - createUser(item: User)
 
+
 - updatePost(id: number, item: Post)
 - updateComment(id: number, item: Comment)
 - updatePhoto(id: number, item: Photo)
@@ -76,12 +81,14 @@ Methods - All methods are async:
 - updateTodo(id: number, item: Todo)
 - updateUser(id: number, item: User)
 
+
 - deletePost(id: number)
 - deleteComment(id: number)
 - deleteAlbum(id: number)
 - deletePhoto(id: number)
 - deleteTodo(id: number)
 - deleteUser(id: number)
+
 
 
 ### Use reqres.in
