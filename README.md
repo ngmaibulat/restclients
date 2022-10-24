@@ -48,6 +48,8 @@ https://github.com/ngmaibulat/restclients/issues
 ### Use jsonplaceholder.typicode.com - ESM modules
 
 ```js
+import {JsonPlaceHolderApi} from '@aibulat/restclients/jsonplaceholder';
+
 try {
     const api = new JsonPlaceHolderApi();
     const res = await api.getPosts();
