@@ -1,5 +1,5 @@
-import {AxiosError, Post, Comment, Album, Photo, Todo, User} from '../../jsonplaceholder/index.js';
-import {JsonPlaceHolderApi} from '../../jsonplaceholder/index.js';
+import {AxiosError, Post, Comment, Album, Photo, Todo, User} from '../../../jsonplaceholder/index.js';
+import {JsonPlaceHolderApi} from '../../../jsonplaceholder/index.js';
 
 async function run()
 {

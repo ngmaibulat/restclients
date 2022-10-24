@@ -1,4 +1,4 @@
-import {JsonPlaceHolderApi} from '../../jsonplaceholder/index.js';
+import {JsonPlaceHolderApi} from '../../../jsonplaceholder/index.js';
 
 try {
     const api = new JsonPlaceHolderApi();

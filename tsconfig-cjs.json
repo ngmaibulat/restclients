@@ -1,9 +1,10 @@
 {
     "extends": "./tsconfig-base.json",
+    "exclude": ["dist", "**/esm"],
     "compilerOptions": {
         "target": "ES2022", 
         "module": "CommonJS",
         "outDir": "dist/cjs",
-        "moduleResolution": "NodeNext",
+        "moduleResolution": "NodeNext"
     }
 }
