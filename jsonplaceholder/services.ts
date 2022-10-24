@@ -3,40 +3,61 @@ import {api} from './axios.js';
 
 class JsonPlaceHolderApi
 {
-    async getPosts()
+    getLimit(limit?: number)
     {
+        let config;
+
+        if (limit) {
+            config = {
+                params: {
+                    _limit: limit
+                }
+            }
+        }
+
+        return config;
+    }
+
+    async getPosts(limit?: number)
+    {
+        const config = this.getLimit(limit);
         const url = '/posts';
-        return api.get<Array<Post>>(url);
+        return api.get<Array<Post>>(url, config);
     }
     
-    async getComments()
+    async getComments(limit?: number)
     {
+        const config = this.getLimit(limit);
         const url = '/comments';
-        return api.get<Array<Comment>>(url);
+        return api.get<Array<Comment>>(url, config);
     }
 
-    async getAlbums()
+    async getAlbums(limit?: number)
     {
+        const config = this.getLimit(limit);
         const url = '/albums';
-        return api.get<Array<Album>>(url);
+        return api.get<Array<Album>>(url, config);
     }
 
-    async getPhotos()
+    async getPhotos(limit?: number)
     {
+        const config = this.getLimit(limit);
         const url = '/photos';
-        return api.get<Array<Photo>>(url);
+        return api.get<Array<Photo>>(url, config);
     }
 
-    async getTodos()
+    async getTodos(limit?: number)
     {
+        const config = this.getLimit(limit);
         const url = '/todos';
-        return api.get<Array<Todo>>(url);
+        return api.get<Array<Todo>>(url, config);
     }
 
-    async getUsers()
+    async getUsers(limit?: number)
     {
+        const config = this.getLimit(limit);
         const url = '/users';
-        return api.get<Array<User>>(url);
+        return api.get<Array<User>>(url, config);
     }
 
 

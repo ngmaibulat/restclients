@@ -6,19 +6,19 @@ async function run()
     const api = new JsonPlaceHolderApi();
     let res: any;
     
-    res = await api.getPosts();
+    res = await api.getPosts(2);
     console.log(res.data[0]);
     
-    res = await api.getComments();
+    res = await api.getComments(2);
     console.log(res.data[0]);
     
-    res = await api.getPhotos();
+    res = await api.getPhotos(2);
     console.log(res.data[0]);
     
-    res = await api.getTodos();
+    res = await api.getTodos(2);
     console.log(res.data[0]);
     
-    res = await api.getUsers();
+    res = await api.getUsers(2);
     console.log(res.data[0]);
     
     
@@ -39,7 +39,9 @@ async function run()
     console.log( res.data );
     
     res = await api.getUser(1);
-    console.log( res.data );    
+    console.log( res.data );
+
+
 }
 
 run();

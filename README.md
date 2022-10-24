@@ -81,12 +81,12 @@ run();
 #### All methods are async:
 
 ```ts
-getPosts()
-getComments()
-getAlbums()
-getPhotos()
-getTodos()
-getUsers()
+getPosts(limit?: number)
+getComments(limit?: number)
+getAlbums(limit?: number)
+getPhotos(limit?: number)
+getTodos(limit?: number)
+getUsers(limit?: number)
 
 getPost(id: number)
 getComment(id: number)
