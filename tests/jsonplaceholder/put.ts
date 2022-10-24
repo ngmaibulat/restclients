@@ -67,3 +67,9 @@ async function run()
     console.log( res2.headers['date'] );
     console.log( res2.data );    
 }
+
+run()
+  .catch(err => {
+    console.log("API Error");
+    console.log(err.cause);
+  });

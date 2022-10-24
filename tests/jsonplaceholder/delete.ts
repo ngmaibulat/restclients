@@ -12,6 +12,9 @@ async function run()
     console.log( res.statusText );
 }
 
-run();
-
+run()
+  .catch(err => {
+    console.log("API Error");
+    console.log(err.cause);
+  });
 

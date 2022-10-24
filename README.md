@@ -48,11 +48,14 @@ https://github.com/ngmaibulat/restclients/issues
 ### Use jsonplaceholder.typicode.com - ESM modules
 
 ```js
-import {JsonPlaceHolderApi} from '@aibulat/restclients/jsonplaceholder';
-
-const api = new JsonPlaceHolderApi();
-const res = await api.getPosts();
-console.log( res.data );
+try {
+    const api = new JsonPlaceHolderApi();
+    const res = await api.getPosts();
+    console.log( res.data );
+}
+catch(err) {
+    console.log("API Error");
+}
 ```
 
 ---
@@ -70,7 +73,11 @@ async function run()
     console.log( res.data );    
 }
 
-run();
+run()
+  .catch(err => {
+    console.log("API Error");
+    console.log(err.cause);
+  });
 
 ```
 
@@ -88,6 +95,7 @@ getPhotos(limit?: number)
 getTodos(limit?: number)
 getUsers(limit?: number)
 
+
 getPost(id: number)
 getComment(id: number)
 getAlbum(id: number)
@@ -95,7 +103,9 @@ getPhoto(id: number)
 getTodo(id: number)
 getUser(id: number)
 
+
 getCommentsByPost(postid: number)
+
 
 createPost(item: Post)
 createComment(item: Comment)

@@ -68,4 +68,9 @@ async function run()
     console.log( res2.data );
 }
 
-run();
+run()
+  .catch(err => {
+    console.log("API Error");
+    console.log(err.cause);
+  });
+

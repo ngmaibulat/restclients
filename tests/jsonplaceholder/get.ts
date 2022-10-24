@@ -1,4 +1,4 @@
-import {Post, Comment, Album, Photo, Todo, User} from '../../jsonplaceholder/index.js';
+import {AxiosError, Post, Comment, Album, Photo, Todo, User} from '../../jsonplaceholder/index.js';
 import {JsonPlaceHolderApi} from '../../jsonplaceholder/index.js';
 
 async function run()
@@ -44,4 +44,22 @@ async function run()
 
 }
 
-run();
+try {
+    await run();
+}
+catch(err) {
+    //do some error handling
+    // console.log(err?.constructor?.name);
+
+    if (err instanceof AxiosError) {
+        // console.log("cause:", err.cause);
+        // console.log("msg:", err.message);
+
+        if (err.code == "ENOTFOUND") {
+            console.error("DNS or Internet Connection Error");
+        }
+    }
+    else {
+        console.error("Unknown API Error");
+    }
+}
