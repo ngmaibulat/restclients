@@ -29,6 +29,7 @@ For example, Parcel is known to have problems with that.
 Please see: https://github.com/parcel-bundler/parcel/issues/4155
 
 Personally, I use esbuild which works fine.
+https://esbuild.github.io/getting-started/#install-esbuild
 
 If you are interested, here is the relevant part of package.json:
 
