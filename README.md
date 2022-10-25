@@ -23,6 +23,31 @@ https://axios-http.com/docs/intro
 
 Just like Axios, this package can run on both Node and Browser platforms.
 
+This package provides both ESM and CJS exports. To achieve this, it uses exports map in package.json. That works fine, however certain bundlers do not support package.json export maps.
+
+For example, Parcel is known to have problems with that.
+Please see: https://github.com/parcel-bundler/parcel/issues/4155
+
+Personally, I use esbuild which works fine.
+
+If you are interested, here is the relevant part of package.json:
+
+```json
+{
+  "exports": {
+    ".": null,
+    "./jsonplaceholder": {
+      "import": "./dist/esm/jsonplaceholder/index.js",
+      "require": "./dist/cjs/jsonplaceholder/index.js"
+    },
+    "./reqres": {
+      "import": "./dist/esm/reqres.in/index.js",
+      "require": "./dist/cjs/reqres.in/index.js"
+    }
+  }
+}
+```
+
 ---
 
 ### Where is the code?
