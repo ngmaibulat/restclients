@@ -1,49 +1,50 @@
 {
-  "name": "@aibulat/restclients",
-  "version": "1.2.38",
-  "description": "A set of REST API clients using Typescript and Axios",
-  "main": "./lib/index.js",
-  "type": "module",
-  "module": "./lib/index.js",
-  "exports": {
-    ".": null,
-    "./jsonplaceholder": {
-      "import": "./dist/esm/jsonplaceholder/index.js",
-      "require": "./dist/cjs/jsonplaceholder/index.js"
+    "name": "@aibulat/restclients",
+    "version": "1.2.38",
+    "description": "A set of REST API clients using Typescript and Axios",
+    "main": "./lib/index.js",
+    "type": "module",
+    "types": "./dist/esm/jsonplaceholder/index.d.ts",
+    "module": "./lib/index.js",
+    "exports": {
+        ".": null,
+        "./jsonplaceholder": {
+            "import": "./dist/esm/jsonplaceholder/index.js",
+            "require": "./dist/cjs/jsonplaceholder/index.js"
+        },
+        "./reqres": {
+            "import": "./dist/esm/reqres.in/index.js",
+            "require": "./dist/cjs/reqres.in/index.js"
+        }
     },
-    "./reqres": {
-      "import": "./dist/esm/reqres.in/index.js",
-      "require": "./dist/cjs/reqres.in/index.js"
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && bash fixup.sh",
+        "build-dev": "tsc -w",
+        "docs-update": "git add . ; git commit -a -m 'Docs Update'; git push",
+        "alga": "npm run build; npm version patch; npm publish; git push"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ngmaibulat/restclients.git"
+    },
+    "keywords": [
+        "API",
+        "REST API",
+        "Axios",
+        "HTTP",
+        "Client",
+        "REST API Client",
+        "JSONPlaceHolder",
+        "Wrapper"
+    ],
+    "author": "Aibulat",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ngmaibulat/restclients/issues"
+    },
+    "homepage": "https://github.com/ngmaibulat/restclients#readme",
+    "dependencies": {
+        "axios": "^1.1.3"
     }
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && bash fixup.sh",
-    "build-dev": "tsc -w",
-    "docs-update": "git add . ; git commit -a -m 'Docs Update'; git push",
-    "alga": "npm run build; npm version patch; npm publish; git push"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ngmaibulat/restclients.git"
-  },
-  "keywords": [
-    "API",
-    "REST API",
-    "Axios",
-    "HTTP",
-    "Client",
-    "REST API Client",
-    "JSONPlaceHolder",
-    "Wrapper"
-  ],
-  "author": "Aibulat",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ngmaibulat/restclients/issues"
-  },
-  "homepage": "https://github.com/ngmaibulat/restclients#readme",
-  "dependencies": {
-    "axios": "^1.1.3"
-  }
 }
